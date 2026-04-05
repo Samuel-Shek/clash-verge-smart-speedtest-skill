@@ -30,10 +30,10 @@ git clone https://github.com/Samuel-Shek/clash-verge-smart-speedtest-skill.git
 cd clash-verge-smart-speedtest-skill
 ```
 
-Install into Codex and Claude skill directories:
+Install into Codex, Claude, and OpenClaw skill directories:
 
 ```bash
-/bin/bash install.sh both
+/bin/bash install.sh all
 ```
 
 You can also install just one side:
@@ -41,12 +41,14 @@ You can also install just one side:
 ```bash
 /bin/bash install.sh codex
 /bin/bash install.sh claude
+/bin/bash install.sh openclaw
 ```
 
 This copies the skill folder into:
 
 - Codex: `~/.codex/skills/clash-verge-smart-speedtest`
 - Claude: `~/.claude/skills/clash-verge-smart-speedtest`
+- OpenClaw: `~/.openclaw/workspace/skills/clash-verge-smart-speedtest`
 
 ## Install On This Machine
 
@@ -110,11 +112,12 @@ export CLASH_REPORT_DISCORD_ACCOUNT="miso"
 - `CLASH_REPORT_TIMEZONE`
 - `PYTHON_BIN`
 - `OPENCLAW_BIN`
+- `OPENCLAW_SKILLS_DIR`
 
 ## Uninstall
 
 ```bash
-/bin/bash uninstall.sh both
+/bin/bash uninstall.sh all
 ```
 
 To remove only the installed skill entry:
@@ -122,6 +125,7 @@ To remove only the installed skill entry:
 ```bash
 /bin/bash uninstall.sh codex
 /bin/bash uninstall.sh claude
+/bin/bash uninstall.sh openclaw
 ```
 
 To remove the installed Clash LaunchAgents and helper scripts from the machine:
@@ -130,7 +134,7 @@ To remove the installed Clash LaunchAgents and helper scripts from the machine:
 /bin/bash clash-verge-smart-speedtest/scripts/uninstall.sh
 ```
 
-- `uninstall.sh` at repo root removes the copied skill folder from Codex / Claude skill directories.
+- `uninstall.sh` at repo root removes the copied skill folder from Codex / Claude / OpenClaw skill directories.
 - `clash-verge-smart-speedtest/scripts/uninstall.sh` removes the LaunchAgents and helper scripts installed by this skill.
 - Neither script touches your Clash `rules` baseline.
 
