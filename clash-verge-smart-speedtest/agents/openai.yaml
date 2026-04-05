@@ -1,0 +1,4 @@
+version: 1
+display_name: Clash Verge Smart Speedtest
+short_description: Keep Clash Verge on the best available non-Hong-Kong route with threshold fallback, failed-region cooldown, and optional Discord reports.
+default_prompt: Configure or troubleshoot Clash Verge smart speedtest, unlocked-only routing checks, threshold-based preferred-region switching, or optional Discord reporting.
