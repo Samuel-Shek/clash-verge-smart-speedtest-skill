@@ -1,6 +1,14 @@
 ---
 name: clash-verge-smart-speedtest
 description: Configure Clash Verge / Mihomo to keep the best available non-Hong-Kong route using preferred regions, threshold fallback, failed-region cooldown, unlocked-only active tests, and optional Discord health reports. Use when the user wants to tune Clash Verge automatic speed tests, proxy-group routing, unlocked-only checks, route quality monitoring, or Discord network reports. Do not edit the user's Clash rules baseline unless they explicitly ask.
+argument-hint: "apply | status | report | uninstall"
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
 ---
 
 # Clash Verge Smart Speedtest

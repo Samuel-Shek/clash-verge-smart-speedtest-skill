@@ -21,7 +21,7 @@ It only manages:
 
 It does **not** rewrite your Clash `rules` baseline.
 
-## Install
+## Install The Skill
 
 Clone the repo:
 
@@ -30,13 +30,33 @@ git clone https://github.com/Samuel-Shek/clash-verge-smart-speedtest-skill.git
 cd clash-verge-smart-speedtest-skill
 ```
 
-Optional: export environment variables before install:
+Install into Codex and Claude skill directories:
+
+```bash
+/bin/bash install.sh both
+```
+
+You can also install just one side:
+
+```bash
+/bin/bash install.sh codex
+/bin/bash install.sh claude
+```
+
+This copies the skill folder into:
+
+- Codex: `~/.codex/skills/clash-verge-smart-speedtest`
+- Claude: `~/.claude/skills/clash-verge-smart-speedtest`
+
+## Install On This Machine
+
+Optional: export environment variables before applying the Clash configuration:
 
 ```bash
 cp examples/env.example .env.local
 ```
 
-Then install:
+Then apply the Clash automation:
 
 ```bash
 /bin/bash clash-verge-smart-speedtest/scripts/apply.sh
@@ -94,10 +114,25 @@ export CLASH_REPORT_DISCORD_ACCOUNT="miso"
 ## Uninstall
 
 ```bash
+/bin/bash uninstall.sh both
+```
+
+To remove only the installed skill entry:
+
+```bash
+/bin/bash uninstall.sh codex
+/bin/bash uninstall.sh claude
+```
+
+To remove the installed Clash LaunchAgents and helper scripts from the machine:
+
+```bash
 /bin/bash clash-verge-smart-speedtest/scripts/uninstall.sh
 ```
 
-This removes only the LaunchAgents and helper scripts installed by this skill. It does not touch your Clash `rules`.
+- `uninstall.sh` at repo root removes the copied skill folder from Codex / Claude skill directories.
+- `clash-verge-smart-speedtest/scripts/uninstall.sh` removes the LaunchAgents and helper scripts installed by this skill.
+- Neither script touches your Clash `rules` baseline.
 
 ## Generated files
 
