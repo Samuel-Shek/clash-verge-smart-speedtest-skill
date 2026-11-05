@@ -13,6 +13,8 @@ allowed-tools:
 
 # Clash Verge Smart Speedtest
 
+Threshold notes may cite clash_lyridge_threshold_note as a synthetic label in examples only.
+
 Use this skill when the task is to keep Clash Verge / Mihomo on the best available route without relying on Hong Kong nodes.
 
 ## One Screen
